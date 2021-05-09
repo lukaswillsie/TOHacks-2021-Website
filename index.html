@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Load React. -->
+		<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+		<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+		<script src="https://kit.fontawesome.com/0d042d8500.js" crossorigin="anonymous"></script>
+
+		<!-- Load our React component. -->
+		<script src="https://storage.googleapis.com/eastern-cosmos-313116.appspot.com/index.js" type="text/babel"></script>
+		<style>
+			#main{
+				width: 50%;
+				margin: auto;
+			}
+			#logo {
+				display: block;
+				width: 35%;
+				margin: auto;
+			}
+			#title {
+				width: 50%;
+				text-align: center;
+				margin: auto;
+			}
+			#search {
+			    border-radius: 50px;
+			    border: 1px solid gray;
+			    padding: 0;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			}
+			#inputbar {
+				border: none;
+				background: none;
+				outline: none;
+				float: left;
+				padding: 0;
+				font-size: 18px;
+				line-height: 70px;
+				transition: 0.4s;
+				width: 600px;
+				padding-left: 25px;
+				color: grey;
+			}
+			#microphone {
+				float: right;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 30px;
+				margin: 5px 5px 5px 0px;
+				color: gray;
+			}
+			#result {
+				padding: 0;
+				position: absolute;
+				top: 75%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-family: Arial, sans-serif;
+				font-size: 17px;
+				transition: 3s;
+			}
+			h1 {
+			  font-size: 72px;
+			  background: linear-gradient(#39FAD8, #702CD6);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			}
+			#typewriter_wrapper {
+				display: flex;
+			}
+			#typewriter {
+				margin: auto;
+			}
+			#typewriter p {
+			  overflow: hidden; /* Ensures the content is not revealed until the animation */
+			  border-right: .15em solid orange; /* The typwriter cursor */
+			  white-space: nowrap; /* Keeps the content on a single line */
+			  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+			  letter-spacing: .15em; /* Adjust as needed */
+			  animation:
+			    typing 3.5s steps(40, end),
+			    blink-caret .75s step-end infinite;
+			}
+
+			/* The typing effect */
+			@keyframes typing {
+			  from { width: 0 }
+			  to { width: 100% }
+			}
+
+			/* The typewriter cursor effect */
+			@keyframes blink-caret {
+			  from, to { border-color: transparent }
+			  50% { border-color: orange; }
+			}
+			#displayWindow {
+				width: 800px;
+    		height: 300px;
+				display: flex;
+			}
+			#displayQuery {
+				display: inline-block;
+				border: 1px solid gray;
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				padding: 10px 10px 0px 10px;
+				text-align: justify;
+				background-color: #6e6e80;
+				font-family: Ubuntu Mono,monospace;
+				color: white;
+				font-weight: 600;
+			}
+			#displayResult {
+				display: inline-block;
+				width: 49%;
+				height: 100%;
+				border: 1px solid gray;
+				border-radius: 10px;
+				padding: 10px 10px 0px 10px;
+				text-align: justify;
+				background-color: #6e6e80;
+				font-family: Ubuntu Mono,monospace;
+			}
+			/* #cursor {
+			  border-left: .1px solid white;
+			  animation: blink .7s steps(1) infinite;
+			} */
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<img src="https://storage.googleapis.com/eastern-cosmos-313116.appspot.com/peacock.png" id="logo"/>
+			<h1 id="title">Peacock</h1>
+		</div>
+		<div id="main_container"></div>
+		<!-- <div id="typewriter_wrapper">
+			<div id="typewriter">
+			  <h1>The cat and the hat.</h1>
+			</div>
+		</div> -->
+	</body>
+</html>
